@@ -8,8 +8,7 @@ app.get('/api/random', (req, res) => {
     .then((response) => {
       // take the reddit post out of the response
       const object = response.data[0].data.children[0].data;
-      const url = object.url;
-      const title = object.title;
+      const { url, title } = object;
 
       const returnJSON = {
         caption: title,
