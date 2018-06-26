@@ -6,11 +6,16 @@
   "author": "miche",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon app"
+    "dev": "nodemon app",
+    "start": "node app",
+    "prod": "forever app.js",
+    "prod-stop": "forever stop app.js"
   },
   "dependencies": {
     "axios": "^0.17.0",
-    "express": "^4.16.2"
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "forever": "^0.15.3"
   },
   "devDependencies": {
     "eslint": "^4.9.0",
